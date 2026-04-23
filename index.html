@@ -17,7 +17,6 @@
       text-align:center;
       padding:60px 20px;
       background:linear-gradient(135deg,#1f1f1f,#000);
-      position:relative;
     }
 
     h1 {
@@ -71,34 +70,16 @@
       border-radius:10px;
       cursor:pointer;
     }
-
-    .logo {
-      position:absolute;
-      top:20px;
-      right:20px;
-      width:120px;
-    }
-
-    @media (max-width: 600px) {
-      .logo {
-        width:80px;
-        top:10px;
-        right:10px;
-      }
-    }
   </style>
 </head>
 
 <body>
 
 <header>
-
-  <!-- LOGO EMBEBIDO -->
-  <img class="logo" src="data:image/png;base64,{{BASE64_AQUI}}" alt="Crazy House Logo">
-
   <h1>CASTING ABIERTO</h1>
   <p>Participa en nuestro nuevo proyecto. Plazas limitadas.</p>
 
+  <!-- BOTÓN DE PAGO -->
   <a class="btn" href="https://www.paypal.com/ncp/payment/E2Q6A7CZGUXWL" target="_blank">
     Apuntarme (5€)
   </a>
@@ -115,6 +96,7 @@
     <textarea name="Descripcion" placeholder="Cuéntanos sobre ti"></textarea>
     <input type="url" name="Video" placeholder="Link vídeo (Drive, YouTube, etc)">
 
+    <!-- CONFIGURACIÓN FORMULARIO -->
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_subject" value="Nueva inscripción Casting">
     <input type="hidden" name="_template" value="table">
