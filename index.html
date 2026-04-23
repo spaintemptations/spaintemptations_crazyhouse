@@ -1,57 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <div id="paypal-container-E2Q6A7CZGUXWL"></div>
-<script>
-  paypal.HostedButtons({
-    hostedButtonId: "E2Q6A7CZGUXWL",
-  }).render("#paypal-container-E2Q6A7CZGUXWL")
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Casting Project</title>
+
   <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#0f0f0f; color:white; }
-    header { text-align:center; padding:60px 20px; background:linear-gradient(135deg,#1f1f1f,#000); }
-    h1 { font-size:3rem; margin-bottom:10px; }
-    p { opacity:0.8; }
-    .btn {
-      display:inline-block;
-      margin-top:20px;
-      padding:15px 30px;
-      background:#ff0055;
+    body {
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:#0f0f0f;
       color:white;
-      text-decoration:none;
-      border-radius:10px;
-      font-weight:bold;
-      transition:0.3s;
     }
-    .btn:hover { background:#ff3377; }
-    section { padding:40px 20px; max-width:800px; margin:auto; }
+
+    header {
+      text-align:center;
+      padding:60px 20px;
+      background:linear-gradient(135deg,#1f1f1f,#000);
+    }
+
+    h1 {
+      font-size:3rem;
+      margin-bottom:10px;
+    }
+
+    p {
+      opacity:0.8;
+    }
+
+    section {
+      padding:40px 20px;
+      max-width:800px;
+      margin:auto;
+    }
+
     input, textarea {
-      width:100%; padding:12px; margin:10px 0;
-      border:none; border-radius:8px;
-      background:#1a1a1a; color:white;
+      width:100%;
+      padding:12px;
+      margin:10px 0;
+      border:none;
+      border-radius:8px;
+      background:#1a1a1a;
+      color:white;
     }
+
     button {
-      padding:15px; width:100%; border:none;
-      background:#00c853; color:white; font-size:16px;
-      border-radius:10px; cursor:pointer;
+      padding:15px;
+      width:100%;
+      border:none;
+      background:#00c853;
+      color:white;
+      font-size:16px;
+      border-radius:10px;
+      cursor:pointer;
+    }
+
+    .paypal-box {
+      margin-top:30px;
+      display:flex;
+      justify-content:center;
     }
   </style>
+
+  <!-- PayPal Script -->
+  <script src="https://www.paypal.com/sdk/js?client-id=BAAb4NCjx-rPAim2NH5homI-DLO5kI8DpqPNGAzC3JdxPU9_Z2wROqdZCEzm8iww9IqwRcnOonqpQ0fFtk&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+
 </head>
+
 <body>
 
 <header>
   <h1>CASTING ABIERTO</h1>
   <p>Participa en nuestro nuevo proyecto. Plazas limitadas.</p>
-  <a class="btn" href=<script 
-  src="https://www.paypal.com/sdk/js?client-id=BAAb4NCjx-rPAim2NH5homI-DLO5kI8DpqPNGAzC3JdxPU9_Z2wROqdZCEzm8iww9IqwRcnOonqpQ0fFtk&components=hosted-buttons&disable-funding=venmo&currency=EUR">
-</script>
+
+  <!-- BOTÓN PAYPAL -->
+  <div class="paypal-box">
+    <div id="paypal-container-E2Q6A7CZGUXWL"></div>
+  </div>
 </header>
 
 <section>
   <h2>Formulario de inscripción</h2>
+
   <form action="https://formsubmit.co/megacalvillo@gmail.com" method="POST">
     <input type="text" name="Nombre" placeholder="Nombre completo" required>
     <input type="number" name="Edad" placeholder="Edad" required>
@@ -64,6 +94,13 @@
     <button type="submit">Enviar inscripción</button>
   </form>
 </section>
+
+<!-- SCRIPT PAYPAL -->
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "E2Q6A7CZGUXWL",
+  }).render("#paypal-container-E2Q6A7CZGUXWL");
+</script>
 
 </body>
 </html>
