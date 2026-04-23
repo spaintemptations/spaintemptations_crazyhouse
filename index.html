@@ -89,13 +89,17 @@
   <h2>Formulario de inscripción</h2>
 
   <form action="https://formsubmit.co/megacalvillo@gmail.com" method="POST">
+    
     <input type="text" name="Nombre" placeholder="Nombre completo" required>
     <input type="number" name="Edad" placeholder="Edad" required>
     <input type="text" name="Instagram" placeholder="Instagram">
     <textarea name="Descripcion" placeholder="Cuéntanos sobre ti"></textarea>
     <input type="url" name="Video" placeholder="Link vídeo (Drive, YouTube, etc)">
 
+    <!-- CONFIGURACIÓN FORMULARIO -->
     <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="Nueva inscripción Casting">
+    <input type="hidden" name="_template" value="table">
 
     <button type="submit">Enviar inscripción</button>
   </form>
